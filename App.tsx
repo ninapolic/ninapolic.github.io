@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
+import About from './components/About';
 import ScheduleWidget from './components/ScheduleWidget';
 import Location from './components/Location';
 import Footer from './components/Footer';
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <NavBar />
       <main>
         <Hero />
+        <About />
         <ScheduleWidget />
         <Location />
       </main>

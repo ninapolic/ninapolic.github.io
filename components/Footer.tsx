@@ -1,5 +1,5 @@
 import React from 'react';
-import { INSTAGRAM_HANDLE, STUDIO_EMAIL } from '../constants';
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, STUDIO_EMAIL } from '../constants';
 import { Instagram, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -14,16 +14,16 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-col items-center md:items-end space-y-4">
             <div className="flex space-x-6">
-                <a href="#" className="hover:text-white transition-colors">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                     <Instagram size={20} strokeWidth={1.5} />
                 </a>
                 <a href={`mailto:${STUDIO_EMAIL}`} className="hover:text-white transition-colors">
                     <Mail size={20} strokeWidth={1.5} />
                 </a>
             </div>
-            <p className="text-stone-500 text-xs font-light">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-stone-500 text-xs font-light hover:text-white transition-colors">
                 {INSTAGRAM_HANDLE}
-            </p>
+            </a>
             <p className="text-stone-600 text-[10px] tracking-widest uppercase mt-8">
                 © {new Date().getFullYear()} Nina Pilates. All Rights Reserved.
             </p>

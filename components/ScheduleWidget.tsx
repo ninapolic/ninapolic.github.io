@@ -20,70 +20,17 @@ const generateSchedule = (): ClassSession[] => {
     const dateStr = `${month} ${dateNum}`;
     const dayName = i === 1 ? "Tomorrow" : date.toLocaleString('en-US', { weekday: 'long' });
 
-    // Define classes based on day
-    if (dayOfWeek === 6) { // Saturday
-       schedule.push({
-         id: currentId++,
-         day: dayName,
-         date: dateStr,
-         time: "9:00 AM",
-         classType: "Weekend Flow",
-         duration: "60 min",
-         instructor: "Nina",
-         status: "FULL"
-       });
-       schedule.push({
-         id: currentId++,
-         day: dayName,
-         date: dateStr,
-         time: "10:15 AM",
-         classType: "Advanced Reformer",
-         duration: "50 min",
-         instructor: "Nina",
-         status: "FULL"
-       });
-    } else { // Weekdays
-       schedule.push({
-         id: currentId++,
-         day: dayName,
-         date: dateStr,
-         time: "7:00 AM",
-         classType: "Reformer Align",
-         duration: "50 min",
-         instructor: "Nina",
-         status: "FULL"
-       });
-       schedule.push({
-         id: currentId++,
-         day: dayName,
-         date: dateStr,
-         time: "8:00 AM",
-         classType: "Sculpt & Lengthen",
-         duration: "50 min",
-         instructor: "Nina",
-         status: "FULL"
-       });
-       schedule.push({
-         id: currentId++,
-         day: dayName,
-         date: dateStr,
-         time: "5:30 PM",
-         classType: "Sunset Stretch",
-         duration: "50 min",
-         instructor: "Nina",
-         status: "FULL"
-       });
-       schedule.push({
-         id: currentId++,
-         day: dayName,
-         date: dateStr,
-         time: "6:30 PM",
-         classType: "Candlelight Flow",
-         duration: "55 min",
-         instructor: "Nina",
-         status: "FULL"
-       });
-    }
+    // One private session per day at 7am
+    schedule.push({
+      id: currentId++,
+      day: dayName,
+      date: dateStr,
+      time: "7:00 AM",
+      classType: "Private Reformer",
+      duration: "50 min",
+      instructor: "Nina Polic",
+      status: "FULL"
+    });
   }
   
   // Limit to show a clean list, e.g., first 6 items
@@ -123,7 +70,7 @@ const ScheduleWidget: React.FC = () => {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-serif text-stone-800">Class Schedule</h2>
           <p className="text-stone-500 font-light max-w-md mx-auto">
-            Small group reformer classes designed for precision and flow. 
+            One-on-one reformer sessions designed for precision and flow. 
             <br />
             <span className="text-xs italic mt-2 block text-stone-400">Waitlist available for all sessions.</span>
           </p>

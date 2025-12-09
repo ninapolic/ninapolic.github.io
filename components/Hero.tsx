@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           <p className="text-stone-600 font-light leading-relaxed max-w-sm">
             Experience a modern approach to classic Pilates. 
             Tailored movement to sculpt, lengthen, and restore balance to your body 
-            in a private, sun-drenched sanctuary on Dolores Street.
+            in a private, sun-drenched sanctuary in San Francisco.
           </p>
 
           <div className="pt-4">

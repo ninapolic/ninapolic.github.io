@@ -25,7 +25,7 @@ const About: React.FC = () => {
               </p>
               
               <p>
-                With just a single reformer in a sun-filled private studio on Dolores Street, 
+                With just a single reformer in a sun-filled private studio in San Francisco, 
                 every session is fully personalized. No distractions, no comparisons, 
                 no rushing through movements. Just focused, intentional work that meets 
                 you exactly where you are.
